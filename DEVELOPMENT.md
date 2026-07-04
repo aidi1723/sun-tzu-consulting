@@ -31,10 +31,24 @@
 - 详细模型、schema、案例、集成协议放在 `references/`。
 - 新增行业案例时，优先补 `references/examples.md`，不要把长案例写进 `SKILL.md`。
 - 新增评分标准时，补 `references/assessment-framework.md`，并保持 0-10 分制。
-- L2 交接字段必须继续兼容 `thirty-six-strategies` 的 `business_dilemma`、`stakeholders`、`client_bottom_line`。
+- L2 交接字段必须继续兼容 `thirty-six-strategies` 的 `context_type`、`dilemma_or_input`、`my_resources_and_position`、`opponent_profile`。
 - 不要让 L2 为 L1 已判定不可行的原方案背书；L2 只能用于合法转向、破局、谈判、止损或退出。
 
 ## 本地校验
+
+优先运行仓库内的本地校验脚本：
+
+```bash
+ruby scripts/validate.rb
+```
+
+校验范围：
+
+- `SKILL.md` frontmatter 存在且字段有效
+- Markdown 代码围栏成对
+- `agents/openai.yaml` 可解析
+- `references/schema.md` 的 JSON schema 可解析
+- 如果同级目录存在 `thirty-six-strategies`，校验 L1→L2 handoff 字段兼容性
 
 优先使用官方校验脚本：
 
@@ -72,7 +86,7 @@ puts 'Validation passed'
 RUBY
 ```
 
-校验范围：
+等价基础校验范围：
 
 - `SKILL.md` frontmatter 存在且字段有效
 - Skill name 为小写 hyphen-case

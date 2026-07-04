@@ -64,9 +64,10 @@ Example handoff:
 {
   "invoke_skill": "thirty-six-strategies",
   "reason": "Original APP strategy rejected; client needs a lower-risk asset-based pivot.",
-  "business_dilemma": "Traditional education institution needs online transformation without native AI product capability.",
-  "stakeholders": "Students, parents, teachers, local regulators, AI vendors, distressed AI startup targets.",
-  "client_bottom_line": "Do not burn more than 5M RMB before validating paid demand and regulatory compliance."
+  "context_type": "business_negotiation",
+  "dilemma_or_input": "Traditional education institution needs online transformation without native AI product capability.",
+  "my_resources_and_position": "Offline campuses, teachers, proprietary exercises, parent trust, 5M RMB budget cap, 12-month validation window, and strict education compliance boundary.",
+  "opponent_profile": "Students, parents, teachers, local regulators, AI vendors, large AI education platforms, and distressed AI startup targets."
 }
 ```
 

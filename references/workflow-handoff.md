@@ -27,17 +27,19 @@ Map L1 findings to the L2 input schema:
 
 | L1 finding | L2 field |
 | --- | --- |
-| Main strategic bottleneck | `business_dilemma` |
-| Stakeholders, competitors, regulators, channels, internal factions | `stakeholders` |
-| Budget cap, reputation floor, compliance boundary, time limit, cash runway | `client_bottom_line` |
+| Situation type, such as negotiation, supply-chain pressure, contract design, marketing, news interpretation, or a close inferred domain | `context_type` |
+| Main strategic bottleneck, concrete blockage, or pivot/exit dilemma | `dilemma_or_input` |
+| Client assets, leverage, constraints, desired end state, budget cap, reputation floor, compliance boundary, time limit, and cash runway | `my_resources_and_position` |
+| Competitors, regulators, channels, internal factions, counterpart incentives, strengths, weaknesses, and likely reactions | `opponent_profile` |
 
 Recommended L2 prompt:
 
 ```text
-Use $thirty-six-strategies to produce a lawful tactical solution for this business dilemma:
-business_dilemma: ...
-stakeholders: ...
-client_bottom_line: ...
+Use $thirty-six-strategies to produce a lawful tactical solution:
+context_type: business_negotiation
+dilemma_or_input: ...
+my_resources_and_position: ...
+opponent_profile: ...
 ```
 
 ## Handoff Patterns

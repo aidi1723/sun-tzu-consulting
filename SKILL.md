@@ -75,7 +75,7 @@ For consulting analysis, output in Chinese using this structure unless the user 
 - 31-90 天：试点、组织、资源或渠道动作。
 - 90 天后：规模化、退出或转向条件。
 
-【L2 破局交接】：是否建议调用 `thirty-six-strategies`；若建议，写出业务困境、利益相关方、客户底线。
+【L2 破局交接】：是否建议调用 `thirty-six-strategies`；若建议，按其 schema 写出 `context_type`、`dilemma_or_input`、`my_resources_and_position`、`opponent_profile`。
 ```
 
 When the user asks for a board memo, add `董事会结论`, `投资/预算建议`, `组织调整要求`, and `不建议动作`.
