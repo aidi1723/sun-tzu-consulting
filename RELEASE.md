@@ -1,6 +1,6 @@
 # 孙子兵法咨询引擎 Skill 发布说明
 
-版本：v1.0
+当前版本：v1.1
 
 ## 项目简介
 
@@ -61,7 +61,19 @@ Skill 会输出：
 
 ## 版本说明
 
-- 当前版本：v1.0
+### v1.1
+
+发布后可用化与验证增强版本：
+
+- 修复并固化 L1 到 `thirty-six-strategies` 的 handoff 字段契约。
+- 新增 `scripts/validate.rb`，校验 frontmatter、Markdown、YAML、JSON schema、L2 字段兼容性和 handoff JSON 示例。
+- 保留并运行隐私扫描，避免本机路径和环境信息泄露到公开仓库。
+- 新增 MIT License、README 安装说明、`CLOSEOUT.md` 和 `FINAL_REPORT.md`。
+- 完成 GitHub 安装验证，确认可通过 Codex skill installer 安装。
+- 明确后续维护规则：不移动 `v1.0`，后续功能和维护更新使用新版本标签。
+
+### v1.0
+
 - 主要内容：基础 Skill 结构、五事七计评估框架、调用 schema、L1→L2 工作流交接、典型咨询案例和开发文档
 
 ## 注意事项
@@ -69,4 +81,3 @@ Skill 会输出：
 - 本 Skill 仅用于合法、合规、可执行的战略分析
 - 不应将其用于欺诈、胁迫、隐私侵犯、违法裁员、市场操纵或虚假融资叙事
 - 复杂法务、财务、劳动用工、教育监管、医疗合规、金融监管和数据安全场景应结合专业审核
-

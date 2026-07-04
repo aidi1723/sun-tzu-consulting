@@ -6,9 +6,11 @@ Date: 2026-07-04
 
 - Repository: `sun-tzu-consulting`
 - Default branch: `main`
-- Release tag: `v1.0`
-- Release commit: `b5b58c7` (`Prepare Sun Tzu consulting skill release`)
-- GitHub Release: https://github.com/aidi1723/sun-tzu-consulting/releases/tag/v1.0
+- Current release tag: `v1.1`
+- Initial release tag: `v1.0`
+- Initial release commit: `b5b58c7` (`Prepare Sun Tzu consulting skill release`)
+- Current GitHub Release: https://github.com/aidi1723/sun-tzu-consulting/releases/tag/v1.1
+- Initial GitHub Release: https://github.com/aidi1723/sun-tzu-consulting/releases/tag/v1.0
 - License: MIT
 
 ## Completed Work
@@ -19,6 +21,7 @@ Date: 2026-07-04
 - Added `scripts/validate.rb` for deterministic local validation.
 - Added MIT license and release documentation.
 - Preserved the remote privacy-scan workflow and added contract validation for the handoff JSON example.
+- Added `FINAL_REPORT.md` and `v1.1` release notes for the final delivery state.
 
 ## Verification Evidence
 
@@ -43,7 +46,7 @@ both skills.
 
 ## Maintenance Rules
 
-- Do not move `v1.0` for maintenance-only commits.
+- Do not move `v1.0`; use new version tags for maintenance or capability updates.
 - Keep L1 handoff examples parseable JSON and compatible with the current L2 schema.
 - Run `ruby scripts/validate.rb` before every commit.
 - Run `bash scripts/privacy-scan.sh` before publishing or creating a release.
