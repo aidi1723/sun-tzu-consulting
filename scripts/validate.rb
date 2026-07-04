@@ -65,6 +65,13 @@ if Dir.exist?(l2_dir)
     handoff_text.include?("`#{field}`") || own_schema_text.include?("\"#{field}\"")
   end
   abort_with("L1 handoff still contains stale fields: #{stale_fields.join(', ')}") unless stale_fields.empty?
+
+  handoff_json_blocks = own_schema_text.scan(/```json\n(.*?)\n```/m).flatten
+  handoff_example = handoff_json_blocks.map { |block| JSON.parse(block) }.find { |object| object['invoke_skill'] == 'thirty-six-strategies' }
+  abort_with('references/schema.md must include a parseable thirty-six-strategies handoff example') unless handoff_example
+
+  missing_handoff_fields = l2_fields.reject { |field| handoff_example.key?(field) }
+  abort_with("handoff example does not include L2 fields: #{missing_handoff_fields.join(', ')}") unless missing_handoff_fields.empty?
 end
 
 puts 'Validation passed'
