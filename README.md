@@ -31,6 +31,19 @@ Skill 会从五个维度进行咨询式审计：
 
 输出包含五维评分、雷达图数据、胜率判断、关键风险预警、行动建议，以及必要时对 `thirty-six-strategies` 的 L2 交接 payload。
 
+## 安装到 Codex
+
+使用 Codex 自带的 `skill-installer` 从 GitHub 安装：
+
+```bash
+python3 "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
+  --repo aidi1723/sun-tzu-consulting \
+  --path . \
+  --name sun-tzu-consulting
+```
+
+安装后重启 Codex，使 `$sun-tzu-consulting` 进入可发现 skill 列表。若目标目录已存在，请先备份或删除旧目录后再安装。
+
 ## 目录结构
 
 ```text
